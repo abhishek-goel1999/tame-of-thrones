@@ -14,20 +14,20 @@ class DataLoaderFactory:
                                       sourceType + '" not implemented')
 
 
-    def _loadCsvData(kingdomCsvPath: str):
-        """
-        Loads Data given in the input csv file present in the resources folder
-        The Format:
-            Kingdom Name, Kingdom Emblem
-        """
+def _loadCsvData(kingdomCsvPath: str):
+    """
+    Loads Data given in the input csv file present in the resources folder
+    The Format:
+        Kingdom Name, Kingdom Emblem
+    """
 
-        filePath = os.getcwd() + "/" + ResourceDirectory + "/" + kingdomCsvPath
+    filePath = os.getcwd() + "/" + ResourceDirectory + "/" + kingdomCsvPath
 
-        kingdomArr = []
+    kingdomArr = []
 
-        with open(filePath, newline="") as csvFile:
-            reader = csv.reader(csvFile, delimiter=",")
-            for row in reader:
-                kingdomArr.append((row[0], row[1]))
+    with open(filePath, newline="") as csvFile:
+        reader = csv.reader(csvFile, delimiter=",")
+        for row in reader:
+            kingdomArr.append(Kingdom(row[0], row[1]))
 
-        return kingdomArr
+    return kingdomArr

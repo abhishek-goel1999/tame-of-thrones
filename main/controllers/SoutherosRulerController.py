@@ -26,7 +26,7 @@ class SoutherosRulerController:
 
         messages = readMessagesFromFile(filePath)
 
-        ruler = self.__southerosRulerService.checkRulerOfSoutheros(
+        ruler = self.__southerosRulerService.checkSoutherosRuler(
             kingdomName, messages)
 
         if ruler == None:

@@ -9,5 +9,5 @@ KingdomCsvPath = 'kingdoms.csv'
 
 #ruler checking configurations
 
-RulerCheckingCondition = 'cipheredMessage'
+RulerCheckingCondition = 'messages'
 CipherTechnique = 'Caesar'

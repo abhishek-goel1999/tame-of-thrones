@@ -3,7 +3,7 @@ from main.models.Kingdom import Kingdom
 from main.services.SoutherosRulerServices.SoutherosRulerService import SoutherosRulerService
 from main.utils.KingdomRepositoryServiceFactory import getKingdomRepositoryService
 
-class SoutherosRulerByMessageService(SoutherosRulerService):
+class SoutherosRulerByMessagesService(SoutherosRulerService):
     """Service to check if a kingdom can be a ruler of southeros by sending msgs and find how many allies"""
 
 
@@ -15,7 +15,7 @@ class SoutherosRulerByMessageService(SoutherosRulerService):
         self.__kingdomRepositoryService = getKingdomRepositoryService(
             DataLoadingSource)()
 
-    def checkRulerOfSoutheros(self, currKingdomName: str,
+    def checkSoutherosRuler(self, currKingdomName: str,
                                  messages: dict) -> Kingdom:
         """
         Send messages to all the kingdoms and check the allies
@@ -28,7 +28,7 @@ class SoutherosRulerByMessageService(SoutherosRulerService):
 
         currKingdom.evaluateAllies(kingdoms, messages)
 
-        if len(currKingdom.get_allies()) >= 3:
+        if len(currKingdom.getAllies()) >= 3:
             return currKingdom
         else:
             return None

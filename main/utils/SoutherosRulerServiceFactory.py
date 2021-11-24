@@ -5,7 +5,7 @@ def getSoutherosRulerService(conditionType):
         ConditionType: condition to be used (eg: messages)"""
 
     if conditionType == "messages":
-        return SoutherosRulerByMessagesService.SoutherosRulerByMessageService
+        return SoutherosRulerByMessagesService.SoutherosRulerByMessagesService
     
     else:
         raise NotImplementedError(

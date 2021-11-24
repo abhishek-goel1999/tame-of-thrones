@@ -1,4 +1,4 @@
-from main.utils.cipherSystem import CipherUtil
+from main.utils.cipherSystem.CipherUtil import CipherUtil
 
 class CaesarCipherUtil(CipherUtil): 
     #inherit and define cypher func of abstract class CipherUtil
@@ -20,7 +20,7 @@ class CaesarCipherUtil(CipherUtil):
         plainMessage = ''
         
         for i in cipheredMessage:
-            if i.isaplha():
+            if i.isalpha():
                 if i.isupper():
                     plainMessage += chr((ord(i) - ord('A') - key) % 26 + ord('A'))
                 else:
