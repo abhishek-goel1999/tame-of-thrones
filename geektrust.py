@@ -9,7 +9,7 @@ def main():
 
     inputPath = sys.argv[1]
 
-    checkRulerRes = rulerController.checkIfRuler('SPACE',inputPath)
+    checkRulerRes = rulerController.checkIfKingdomIsRuler('SPACE',inputPath)
 
     print(checkRulerRes)
 
