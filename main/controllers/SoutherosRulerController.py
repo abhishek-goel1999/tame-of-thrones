@@ -12,7 +12,7 @@ class SoutherosRulerController:
         self.__southerosRulerService = getSoutherosRulerService(
             RulerCheckingCondition)()
 
-    def checkIfKingdomIsRuler(self, kingdomName:str, filePath: str) -> str:
+    def checkIfKingdomIsRuler(self, kingdomName: str, filePath: str) -> str:
         """
         Controller to accept the request
         - Uses Message Reading util to read messages

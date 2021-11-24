@@ -1,6 +1,3 @@
-from _typeshed import StrOrBytesPath
-
-
 def readMessagesFromFile(filePath):
     msgDict = {}
     with open(filePath) as file:
