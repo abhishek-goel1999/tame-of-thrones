@@ -118,7 +118,7 @@ def runTestSuite():
     testRunner = unittest.TextTestRunner()
     testSuite = unittest.TestSuite()
     addAllTestsToSuite(testSuite)
-    return testRunner.run(testRunner).wasSuccessful()
+    return testRunner.run(testSuite).wasSuccessful()
 
 
 if __name__ == "__main__":
@@ -132,4 +132,4 @@ if __name__ == "__main__":
         print("All tests ran successfully.")
         print('\nRunning Geektrust Program...')
         print('\nResult:')
-        subprocess.run("python -m geektrust " + inputFilePath)
+        subprocess.run("py -m geektrust " + inputFilePath)
