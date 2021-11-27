@@ -5,7 +5,9 @@ class CaesarCipherUtil(CipherUtil):
     def encrypt (self, plainMessage:str, key:int):
         cipheredMessage = ''
         for i in plainMessage:
-            if i.isalpha():
+            if i == ' ':
+                cipheredMessage += i
+            elif i.isalpha():
                 if i.isupper():
                     cipheredMessage += chr((ord(i) - ord('A') + key) % 26 + ord('A'))
                 else:
@@ -19,7 +21,9 @@ class CaesarCipherUtil(CipherUtil):
         plainMessage = ''
         
         for i in cipheredMessage:
-            if i.isalpha():
+            if i == ' ':
+                plainMessage += ' '
+            elif i.isalpha():
                 if i.isupper():
                     plainMessage += chr((ord(i) - ord('A') - key) % 26 + ord('A'))
                 else:

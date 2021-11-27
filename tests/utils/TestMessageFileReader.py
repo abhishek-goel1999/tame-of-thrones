@@ -13,7 +13,7 @@ class TestMessageFileReader(unittest.TestCase):
         Should read and generate correcct message dictionary
         """
         correctMessages = {
-            'LAND': {'FAIJWJSOOFAMAU', 'dskajd'},
+            'LAND': {'FAIJWJSOOFAMAU'},
             'ICE': {'STHSTSTVSASOS'},
             'FIRE': {'JXGOOMUTOO'}
         }
