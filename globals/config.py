@@ -5,7 +5,7 @@ ResourceDirectory = 'main/resources'
 #kingdom data configurations
 
 DataLoadingSource = 'csv'
-KingdomCsvPath = 'kingdoms.csv'
+KingdomCsvPath = 'Kingdoms.csv'
 
 #ruler checking configurations
 
