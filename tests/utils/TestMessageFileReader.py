@@ -5,8 +5,8 @@ from main.utils.MessageFileReader import readMessagesFromFile
 
 class TestMessageFileReader(unittest.TestCase):
 
-    __CORRECT_FORMAT_FILE_PATH = 'tests/resources/utils/MessageFileReader/CorrectInputFormat.txt'
-    __INCORRECT_FORMAT_FILE_PATH = 'tests/resources/utils/MessageFileReader/IncorrectInputFormat.txt'
+    __CORRECT_FORMAT_FILE_PATH = 'E:/projects/tame-of-thrones/tests/resources/MessageFileReader/CorrectInputFormat.txt'
+    __INCORRECT_FORMAT_FILE_PATH = 'E:/projects/tame-of-thrones/tests/resources/MessageFileReader/IncorrectInputFormat.txt'
 
     def testGenerateMessageDict(self):
         """

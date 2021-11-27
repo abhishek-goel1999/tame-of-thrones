@@ -25,7 +25,7 @@ class TestSoutherosRulerByMessagesService(unittest.TestCase):
         Should return correct Ruler Object for correct messages
         """
 
-        mockedGetAllKingdoms.return_value = self.get_kingdoms()
+        mockedGetAllKingdoms.return_value = self.getKingdoms()
 
         correctRuler = Kingdom('TheGeekTrustKingdom', 'Knight', [
             Kingdom('SPACE', 'Gorilla'),
@@ -61,6 +61,6 @@ class TestSoutherosRulerByMessagesService(unittest.TestCase):
         }
 
         resultRuler = SoutherosRulerByMessagesService(
-        ).check_ruler_of_southeros('TheGeekTrustKingdom', messages)
+        ).checkSoutherosRuler('TheGeekTrustKingdom', messages)
 
         self.assertEqual(correctRuler, resultRuler)

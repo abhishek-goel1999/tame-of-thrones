@@ -8,12 +8,12 @@ from main.services.SoutherosRulerServices.SoutherosRulerByMessagesService import
 
 class TestSoutherosRulerController(unittest.TestCase):
 
-    __CORRECT_MESSAGES_FILE_PATH = 'tests/resources/controllers/CorrectMessages.txt'
-    __INCORRECT_MESSAGES_FILE_PATH = 'tests/resources/controllers/IncorrectMessages.txt'
-    __INCORRECT_FILE_PATH = 'tests/resources/controllers/IncotMessages.txt'
+    __CORRECT_MESSAGES_FILE_PATH = 'tests/resources/Controllers/CorrectMessages.txt'
+    __INCORRECT_MESSAGES_FILE_PATH = 'tests/resources/Controllers/IncorrectMessages.txt'
+    __INCORRECT_FILE_PATH = 'tests/resources/Controllers/IncotMessages.txt'
 
     @patch.object(SoutherosRulerByMessagesService,
-                  'CheckRulerOfSoutheros')
+                  'checkSoutherosRuler')
     def testReturnAllies(self, mockedCheckRuler):
         """
         Controller Should return a RulerKingdom and Allies Output for the correct input
@@ -41,7 +41,7 @@ class TestSoutherosRulerController(unittest.TestCase):
         self.assertEqual(correct_output, result_output)
 
     @patch.object(SoutherosRulerByMessagesService,
-                  'CheckRulerOfSoutheros')
+                  'checkSoutherosRuler')
     def testReturnNone(self, mockedCheckRuler):
         """
         Should return NONE for incorrect messages
@@ -61,7 +61,7 @@ class TestSoutherosRulerController(unittest.TestCase):
         ).checkIfKingdomIsRuler(
             'TheGeekTrustKingdom', self.__INCORRECT_MESSAGES_FILE_PATH)
 
-        mockedCheckRuler.assert_called_with('TheMaroonKingdom', messages)
+        mockedCheckRuler.assert_called_with('TheGeekTrustKingdom', messages)
         self.assertEqual(correct_output, result_output)
 
     def testRaiseFileNotFoundError(self):

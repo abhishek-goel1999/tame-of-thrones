@@ -4,7 +4,6 @@ class CaesarCipherUtil(CipherUtil):
     #inherit and define cypher func of abstract class CipherUtil
     def encrypt (self, plainMessage:str, key:int):
         cipheredMessage = ''
-        
         for i in plainMessage:
             if i.isalpha():
                 if i.isupper():
@@ -12,7 +11,7 @@ class CaesarCipherUtil(CipherUtil):
                 else:
                     cipheredMessage += chr((ord(i) - ord('a') + key) % 26 + ord('a'))
             else:
-                cipheredMessage += i + key
+                cipheredMessage += chr(ord(i) + key)
 
         return cipheredMessage
 
@@ -26,6 +25,6 @@ class CaesarCipherUtil(CipherUtil):
                 else:
                     plainMessage += chr((ord(i) - ord('a') - key) % 26 + ord('a'))
             else:
-                plainMessage += i - key
+                plainMessage += chr(ord(i) - key)
         
         return plainMessage

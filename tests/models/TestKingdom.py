@@ -30,7 +30,7 @@ class TestKingdom(unittest.TestCase):
         correctResponse = True
 
         kingdom = Kingdom('TheGeekTrustKingdom', 'Elephant')
-        resultResponse = kingdom.recieve_message('mtniam xpnilal inilaaa lvl iab')
+        resultResponse = kingdom.recieveMessage('mtniam xpnilal inilaaa lvl iab')
 
         mockedDecrypt.assert_called_with('mtniam xpnilal inilaaa lvl iab', 8)
         self.assertEqual(correctResponse, resultResponse)
@@ -47,7 +47,7 @@ class TestKingdom(unittest.TestCase):
 
         recieverKingdom = Kingdom('TheGeekTrustKingdom', 'Elephant')
         senderKingdom = Kingdom('SPACE', 'Gorilla')
-        resultResponse = senderKingdom.send_message(recieverKingdom, 'mtniam xpnilal inilaaa lvl iab')
+        resultResponse = senderKingdom.sendMessage(recieverKingdom, 'mtniam xpnilal inilaaa lvl iab')
 
         mockedDecrypt.assert_called_with('mtniam xpnilal inilaaa lvl iab', 8)
         self.assertEqual(correctResponse, resultResponse)
@@ -71,8 +71,8 @@ class TestKingdom(unittest.TestCase):
 
         kingdom = Kingdom('TheGeekTrustKingdom', 'Knight')
 
-        kingdom.evaluate_allies(kingdoms, messages)
+        kingdom.evaluateAllies(kingdoms, messages)
 
-        result_allies = kingdom.get_allies()
+        result_allies = kingdom.getAllies()
 
         self.assertEqual(correct_allies, result_allies)
