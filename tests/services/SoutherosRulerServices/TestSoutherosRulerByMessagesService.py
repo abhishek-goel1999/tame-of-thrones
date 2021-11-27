@@ -2,7 +2,7 @@ import unittest
 from unittest.mock import patch
 
 from main.models.Kingdom import Kingdom
-from main.RepositoryServices.KingdomRepositoryServices import KingdomRepositoryCsvService
+from main.RepositoryServices.KingdomRepositoryServices.KingdomRepositoryCsvService import KingdomRepositoryCsvService
 from main.services.SoutherosRulerServices.SoutherosRulerByMessagesService import SoutherosRulerByMessagesService
 
 
